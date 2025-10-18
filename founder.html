@@ -1,49 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full scroll-smooth">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Founder Page</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              'Inter',
+              'ui-sans-serif',
+              'system-ui',
+              'Segoe UI',
+              'Roboto',
+              'Helvetica Neue',
+              'Arial',
+              'Noto Sans',
+              'Apple Color Emoji',
+              'Segoe UI Emoji',
+              'Segoe UI Symbol'
+            ]
+          },
+          colors: {
+            brand: {
+              background: '#0B0F1A',
+              text: '#E5E7EB',
+              accent: {
+                300: '#FACC15',
+                400: '#EAB308',
+                500: '#CA8A04'
+              }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Reduced Motion Preferences -->
+  <style>
+    :root { color-scheme: dark; }
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="min-h-screen bg-brand-background text-brand-text font-sans antialiased">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+    <header class="mb-12">
+      <h1 class="text-3xl sm:text-4xl font-semibold text-center" data-aos="fade-down">About Founders</h1>
+    </header>
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-center mb-5">About Founders</h1>
-      </div>
-      <div class="col-md-4">
-        <div class="text-center">
-          <img src="hutao.jpg" alt="putra" class="rounded-circle mb-3" width="200" height="200">
-          <h4>Putra</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Putra -->
+      <section id="putra" class="text-center scroll-mt-24" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex flex-col items-center">
+          <img src="hutao.jpg" alt="Putra" class="rounded-full h-48 w-48 object-cover mb-3 border border-white/10 shadow" />
+          <h4 class="text-xl font-medium">Putra</h4>
         </div>
-        <p class="text-center">Special Role : Fullstack Developer</p>
-        <hr>
-      </div>
+        <p class="opacity-90">Special Role : Fullstack Developer</p>
+        <div class="border-t border-white/10 mt-6"></div>
+      </section>
 
-      <div class="col-md-4">
-        <div class="text-center">
-          <img src="about.jpeg" alt="seanne" class="rounded-circle mb-3" width="200" height="200">
-          <h4>Seanne</h4>
+      <!-- Seanne -->
+      <section id="seanne" class="text-center scroll-mt-24" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex flex-col items-center">
+          <img src="about.jpeg" alt="Seanne" class="rounded-full h-48 w-48 object-cover mb-3 border border-white/10 shadow" />
+          <h4 class="text-xl font-medium">Seanne</h4>
         </div>
-        <p class="text-center">Special Role : Sharing About Events</p>
-        <hr>
-      </div>
+        <p class="opacity-90">Special Role : Sharing About Events</p>
+        <div class="border-t border-white/10 mt-6"></div>
+      </section>
 
-      <div class="col-md-4">
-        <div class="text-center">
-          <img src="rafi.jpeg" alt="azuya" class="rounded-circle mb-3" width="200" height="200">
-          <h4>Azuya</h4>
+      <!-- Azuya -->
+      <section id="azuya" class="text-center scroll-mt-24" data-aos="fade-up" data-aos-delay="150">
+        <div class="flex flex-col items-center">
+          <img src="rafi.jpeg" alt="Azuya" class="rounded-full h-48 w-48 object-cover mb-3 border border-white/10 shadow" />
+          <h4 class="text-xl font-medium">Azuya</h4>
         </div>
-        <p class="text-center">Special Role : Admin</p>
-        <hr>
-      </div>
-
+        <p class="opacity-90">Special Role : Admin</p>
+        <div class="border-t border-white/10 mt-6"></div>
+      </section>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- AOS Animations JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    (function () {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      AOS.init({
+        once: true,
+        duration: prefersReducedMotion ? 0 : 600,
+        easing: prefersReducedMotion ? 'linear' : 'ease-out',
+        disable: prefersReducedMotion
+      });
+    })();
+  </script>
 </body>
 </html>
