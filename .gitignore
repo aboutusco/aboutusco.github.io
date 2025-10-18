@@ -1,0 +1,20 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# Node/npm (not used here, but safe defaults)
+node_modules/
+npm-debug.log*
+
+# Build artifacts (if any)
+dist/
+build/
+.cache/
+.tmp/

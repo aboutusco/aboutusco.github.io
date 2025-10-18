@@ -1,49 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Founder Page</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founders - OtakuVerse</title>
+  <meta name="description" content="Meet the founders of OtakuVerse. Profiles, roles, and mission statements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    :root { color-scheme: dark; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+  </style>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100">
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 px-3 py-2 bg-yellow-500 text-black rounded">Skip to content</a>
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-center mb-5">About Founders</h1>
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur supports-backdrop-blur:backdrop-blur-md sticky top-0 z-40">
+    <div class="mx-auto max-w-6xl px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="text-yellow-400 font-semibold hover:text-yellow-300">← Back to About</a>
+        <h1 class="text-xl sm:text-2xl font-bold text-yellow-400">Our Founders</h1>
+        <span aria-hidden="true" class="w-24"></span>
       </div>
-      <div class="col-md-4">
-        <div class="text-center">
-          <img src="hutao.jpg" alt="putra" class="rounded-circle mb-3" width="200" height="200">
-          <h4>Putra</h4>
-        </div>
-        <p class="text-center">Special Role : Fullstack Developer</p>
-        <hr>
-      </div>
-
-      <div class="col-md-4">
-        <div class="text-center">
-          <img src="about.jpeg" alt="seanne" class="rounded-circle mb-3" width="200" height="200">
-          <h4>Seanne</h4>
-        </div>
-        <p class="text-center">Special Role : Sharing About Events</p>
-        <hr>
-      </div>
-
-      <div class="col-md-4">
-        <div class="text-center">
-          <img src="rafi.jpeg" alt="azuya" class="rounded-circle mb-3" width="200" height="200">
-          <h4>Azuya</h4>
-        </div>
-        <p class="text-center">Special Role : Admin</p>
-        <hr>
-      </div>
-
+      <nav class="mt-4" aria-label="Founder shortcuts">
+        <ul class="flex flex-wrap gap-2">
+          <li><a href="#putra" class="inline-block px-3 py-1.5 rounded-md bg-slate-800 text-yellow-400 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">Putra</a></li>
+          <li><a href="#seanne" class="inline-block px-3 py-1.5 rounded-md bg-slate-800 text-yellow-400 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">Seanne</a></li>
+          <li><a href="#azuya" class="inline-block px-3 py-1.5 rounded-md bg-slate-800 text-yellow-400 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">Azuya</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <main id="content" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+    <section id="putra" class="scroll-mt-24" data-aos="fade-up">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+        <figure class="order-1 lg:order-none lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
+          <img src="hutao.jpg" alt="Portrait of Putra" class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover ring-4 ring-yellow-500 mx-auto shadow-xl" />
+        </figure>
+        <div class="lg:col-span-3">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-yellow-400">Putra</h2>
+          <p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Special Role: Fullstack Developer</p>
+          <div class="mt-4 space-y-4 text-slate-200">
+            <p>Putra memimpin pengembangan platform OtakuVerse dari front-end hingga back-end, memastikan pengalaman komunitas yang cepat, aman, dan menyenangkan.</p>
+            <p>Misinya adalah membangun tempat yang inklusif bagi para otaku untuk bertemu, berbagi, dan berkembang bersama.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seanne" class="scroll-mt-24" data-aos="fade-up">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+        <figure class="order-1 lg:order-none lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
+          <img src="about.jpeg" alt="Portrait of Seanne" class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover ring-4 ring-yellow-500 mx-auto shadow-xl" />
+        </figure>
+        <div class="lg:col-span-3">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-yellow-400">Seanne</h2>
+          <p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Special Role: Sharing About Events</p>
+          <div class="mt-4 space-y-4 text-slate-200">
+            <p>Seanne mengkurasi dan membagikan informasi acara terbaru seputar budaya pop Jepang agar komunitas selalu up to date.</p>
+            <p>Misinya adalah menghubungkan para penggemar dengan event yang relevan dan bermakna di seluruh Indonesia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="azuya" class="scroll-mt-24" data-aos="fade-up">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+        <figure class="order-1 lg:order-none lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
+          <img src="rafi.jpeg" alt="Portrait of Azuya" class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover ring-4 ring-yellow-500 mx-auto shadow-xl" />
+        </figure>
+        <div class="lg:col-span-3">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-yellow-400">Azuya</h2>
+          <p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Special Role: Admin</p>
+          <div class="mt-4 space-y-4 text-slate-200">
+            <p>Azuya menjaga komunitas tetap aman, ramah, dan terorganisir dengan moderasi yang tegas dan transparan.</p>
+            <p>Misinya adalah menumbuhkan budaya saling menghormati agar semua orang merasa nyaman bergabung dan berkontribusi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800 py-8">
+    <div class="mx-auto max-w-6xl px-4 text-center text-slate-400">
+      <p>&copy; <span id="year"></span> OtakuVerse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      AOS.init({
+        once: true,
+        duration: 700,
+        easing: 'ease-out-cubic',
+        offset: 60,
+        disable: reduceMotion
+      });
+    })();
+  </script>
 </body>
 </html>
