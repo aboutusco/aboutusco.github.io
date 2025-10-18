@@ -1,0 +1,24 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+
+# Environment files
+.env
+.env.*
+
+# Build outputs
+/dist/
+/build/
+/out/
+
+# Node (if used in future)
+node_modules/
+
+# Coverage
+coverage/
+
+# Misc
+*.bak
